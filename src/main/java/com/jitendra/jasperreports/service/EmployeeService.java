@@ -25,7 +25,8 @@ public class EmployeeService {
     }
 
     public String exportReport(String reportFormat) throws FileNotFoundException, JRException {
-        String path = "C:\\Users\\ACER\\Desktop";
+        //String path = "C:\\Users\\ACER\\Desktop";
+        String path="src/main/resources";
         List<Employee> employees=employeeRepo.getAll();
         File file = ResourceUtils.getFile("classpath:employees.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
